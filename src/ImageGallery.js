@@ -83,6 +83,12 @@
         var currentId = jq(elems.thumbnailImage+".active").attr('thumbnail-id');
           self.showSlides(Number(currentId) - 1);
         });
+        jq( elems.imageModal ).on( "dialogclose", function() {
+          jq(".cardContainer").removeClass("inactive");
+        });
+        jq( elems.imageModal ).on( "dialogopen", function() {
+          jq(".cardContainer").addClass("inactive");
+        });
   }
 
   window.ImageGallery = ImageGallery;

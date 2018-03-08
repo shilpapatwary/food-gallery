@@ -4,7 +4,7 @@ body{
 }
 header{
   height:55px;
-  background-color:#00000070;
+  background-color:rgba(0, 0, 0, 0.4392156862745098);
 }
 .header-title::before{
   content: url(./images/chef.png);
@@ -29,38 +29,40 @@ header{
    margin:11px;
    border-radius: 5px;
    display:inline-block;
-   background-color:#ffffff;
+   background-color: rgb(255, 255, 255);
 }
 .cardTitle{
   padding:10px;
-  border-bottom:1px solid #1d1d1de0;
+  border-bottom:1px solid rgba(29, 29, 29, 0.8784313725490196);
   height:32px;
   margin:0;
-  background-color:#8f8f8f7d;
+  background-color:rgba(143, 143, 143, 0.49019607843137);
+  overflow:hidden;
 }
 .clickForImages{
-  background-color: #8f8f8f;
+  background-color: rgb(143, 143, 143);
     border: none;
-    color: #e0f0f0;
+    color: rgb(224, 240, 240);
     font-size: 14px;
     cursor:pointer;
 }
 .clickForImages:hover{
-  color:#000000;
+  color:rgb(0, 0, 0);
 }
 .cardBody{
   padding:10px;
-  height:136px;
+  height:143px;
   font-size:13px;
+  overflow:hidden;
 }
 .cardImage, .cardText{
   display:inline-block;
 }
 .cardImage img{
-  height:90px;
-  width:146px;
+  height:auto;
+  width:100px;
   float:left;
-  padding:0 10px 0 1px;;
+  padding:0 10px 0 1px;
 }
 .cardAbstract{
   padding-top:5px;
@@ -84,9 +86,9 @@ padding: 10px;
  .imageTitle {
    text-align: center;
    display:none;
-   background-color: black;
+   background-color: rgb(0, 0, 0);
    padding: 2px 16px;
-   color: #e9e9e9;
+   color: rgb(233, 233, 233);
    font-size:12px;
    text-align:justify;
  }
@@ -126,22 +128,28 @@ padding: 10px;
  }
 
  /* Position the "next button" to the right */
- .next {
+ .ui-widget-content .next {
    right: 12%;
    border-radius: 3px 0 0 3px;
+   color:rgb(233, 233, 233);
  }
- .prev{
+ .ui-widget-content .prev{
    left:12%;
+   color:rgb(233, 233, 233);
  }
 
  /* On hover, add a black background color with a little bit see-through */
  .prev:hover,
  .next:hover {
-   background-color: #e9e9e9;
+   background-color: rgb(233, 233, 233);
+   color:rgb(0, 0, 0);
  }
  .ui-dialog .ui-dialog-content{
    background-color: black;
  }
  .numbertext{
-   color:#e9e9e9;
+   color:rgb(233, 233, 233);
+ }
+ .inactive{
+   opacity:0.3;
  }

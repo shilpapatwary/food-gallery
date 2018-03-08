@@ -13,11 +13,9 @@
 
   }
   FoodGallery.prototype.init = function(){
-    console.log(data);
   this.paintImages(data);
   this.bindEvents();
   }
-
 
   FoodGallery.prototype.paintImages = function(data){
     var template = jq(jq(elems.cardTemplate).text()),
