@@ -26,9 +26,9 @@ style
 index.html :markup and templates for the application
 
 Note: jQuery version used in the application has the following browser support
-Chrome: (Current - 1) and Current
-Edge: (Current - 1) and Current
-Firefox: (Current - 1) and Current
-Internet Explorer: 9+
-Safari: (Current - 1) and Current
-Opera: Current
+- Chrome: (Current - 1) and Current
+- Edge: (Current - 1) and Current
+- Firefox: (Current - 1) and Current
+- Internet Explorer: 9+
+- Safari: (Current - 1) and Current
+- Opera: Current
