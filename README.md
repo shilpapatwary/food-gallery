@@ -8,24 +8,24 @@
 
 To view the application open index.html in a browser.
 
-Project structure
+**Project structure**
 
-lib
-  ____ jquery,jquery ui
-src
-  ____  FoodGallery.js : Constructs and dynamically renders the cards
+* lib
+    * jquery,jquery ui
+* src
+    * FoodGallery.js : Constructs and dynamically renders the cards
 
-  ____  ImageGallery : Constructs and dynamically renders the images
+    * ImageGallery : Constructs and dynamically renders the images
 
-  ____  stubData :json feed from the given url
+    * stubData :json feed from the given url
 
-style
-  ____ images : images used in css file
-  ____ style.css :styles for the application
+* style
+    * images : images used in css file
+    * style.css :styles for the application
 
-index.html :markup and templates for the application
+* index.html :markup and templates for the application
 
-Note: jQuery version used in the application has the following browser support
+**Note**: jQuery version used in the application has the following browser support
 - Chrome: (Current - 1) and Current
 - Edge: (Current - 1) and Current
 - Firefox: (Current - 1) and Current
