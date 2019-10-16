@@ -1,155 +1,211 @@
-body{
+body {
   padding: 0;
   margin: 0;
+  color: #000000ab;
+  font-family: 'Times New Roman', Times, serif;
 }
-header{
-  height:55px;
-  background-color:rgba(0, 0, 0, 0.4392156862745098);
+header {
+  height: 55px;
+  padding: 0 3%;
+  background-color: #40e0d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
 }
-.header-title::before{
+.user-icon {
+  font-size: 24px;
+}
+.header-title::before {
   content: url(./images/chef.png);
-    position: relative;
-    top: 4px;
-    right: 15px;
 }
-.header-title{
-  font-size:30px;
-  position:relative;
-  top:13%;
-  left:2%;
-  color:#e0f0f0;
+.header-title {
+  font-size: 30px;
+  color: #000000a8;
 }
-.cardContainer{
-  padding:1%;
-  background-color:#3d3d3d1f;
+.filterContainer {
+  height: 5rem;  
 }
-.itemCard{
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   width:31%;
-   margin:11px;
-   border-radius: 5px;
-   display:inline-block;
-   background-color: rgb(255, 255, 255);
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10%;
+  box-sizing: border-box;
 }
-.cardTitle{
-  padding:10px;
-  border-bottom:1px solid rgba(29, 29, 29, 0.8784313725490196);
-  height:32px;
-  margin:0;
-  background-color:rgba(143, 143, 143, 0.49019607843137);
-  overflow:hidden;
+.itemCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 31%;
+  margin: 11px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-.clickForImages{
-  background-color: rgb(143, 143, 143);
-    border: none;
-    color: rgb(224, 240, 240);
-    font-size: 14px;
-    cursor:pointer;
+.cardTitle {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.clickForImages:hover{
-  color:rgb(0, 0, 0);
+.clickForImages {
+  border: none;
+  cursor: pointer;
 }
-.cardBody{
-  padding:10px;
-  height:143px;
-  font-size:13px;
-  overflow:hidden;
+.clickForImages:hover {
+  color: rgb(0, 0, 0);
 }
-.cardImage, .cardText{
-  display:inline-block;
+.cardImage,
+.cardText {
+  position: absolute;
+  width: 100%;
+  height: 13rem;
+  backface-visibility: hidden;
 }
-.cardImage img{
-  height:auto;
-  width:100px;
-  float:left;
-  padding:0 10px 0 1px;
+.cardAuthor {
+  letter-spacing: 2px;
+  margin-left: 8px;
 }
-.cardAbstract{
-  padding-top:5px;
+.cardHeader {
+  text-align: center;
+  flex: 1;
+  margin-bottom: 8px;
 }
-.cardFooter{
+.cardBody {
+  padding: 10px;
+  height: 13rem;
+  font-size: 13px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  background-color: transparent;
+}
+.cardBody:hover .cardInner {
+  transform: rotateY(180deg);
+}
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.cardImage {
+  background-color: #bbb;
+  color: black;
+}
+.cardText {
+  background-color: #fff8dc;
+  color: #000;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7%;
+  font-size: 14px;
+}
+/* .cardImage,
+.cardText {
+  display: inline-block;
+} */
+.cardImage img {
+  height: 13rem;
+  width: 100%;
+  float: left;
+  padding: 0 10px 0 1px;
+}
+.cardAbstract {
+  padding-top: 5px;
+}
+.cardFooter {
   text-align: right;
-padding: 10px;
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
 }
-.author{
+.author {
   font-weight: bold;
 }
 
- /* image gallery styles */
- .modal-dialog{
-   display:none;
-   align:center;
- }
- .mySlides{
-   display:none;
- }
- .imageTitle {
-   text-align: center;
-   display:none;
-   background-color: rgb(0, 0, 0);
-   padding: 2px 16px;
-   color: rgb(233, 233, 233);
-   font-size:12px;
-   text-align:justify;
- }
+/* image gallery styles */
+.modal-dialog {
+  display: none;
+  align: center;
+}
+.mySlides {
+  display: none;
+}
+.imageTitle {
+  text-align: center;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  padding: 2px 16px;
+  color: rgb(233, 233, 233);
+  font-size: 12px;
+  text-align: justify;
+}
 
- .thumbnailImage{
-   width:100%;
-   opacity:0.7;
-   height:57px;
- }
- .active, .thumbnailImage:hover{
-   opacity:1.0;
- }
- .thumbnailColumn {
-   display:inline-block;
-   width: 15%;
-   padding:3px;
- }
- .prev,
- .next {
-   cursor: pointer;
-   position: absolute;
-   top: 40%;
-   width: auto;
-   padding: 5px;
-   margin-top: -50px;
-   color: white;
-   font-weight: bold;
-   font-size: 20px;
-   transition: 0.6s ease;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
-   -webkit-user-select: none;
- }
- .slideImage{
-   width:60%;
-   margin-left: 20%;
- }
+.thumbnailImage {
+  width: 100%;
+  opacity: 0.7;
+  height: 57px;
+}
+.active,
+.thumbnailImage:hover {
+  opacity: 1;
+}
+.thumbnailColumn {
+  display: inline-block;
+  width: 15%;
+  padding: 3px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 5px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.slideImage {
+  width: 60%;
+  margin-left: 20%;
+}
 
- /* Position the "next button" to the right */
- .ui-widget-content .next {
-   right: 12%;
-   border-radius: 3px 0 0 3px;
-   color:rgb(233, 233, 233);
- }
- .ui-widget-content .prev{
-   left:12%;
-   color:rgb(233, 233, 233);
- }
+/* Position the "next button" to the right */
+.ui-widget-content .next {
+  right: 12%;
+  border-radius: 3px 0 0 3px;
+  color: rgb(233, 233, 233);
+}
+.ui-widget-content .prev {
+  left: 12%;
+  color: rgb(233, 233, 233);
+}
 
- /* On hover, add a black background color with a little bit see-through */
- .prev:hover,
- .next:hover {
-   background-color: rgb(233, 233, 233);
-   color:rgb(0, 0, 0);
- }
- .ui-dialog .ui-dialog-content{
-   background-color: black;
- }
- .numbertext{
-   color:rgb(233, 233, 233);
- }
- .inactive{
-   opacity:0.3;
- }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgb(233, 233, 233);
+  color: rgb(0, 0, 0);
+}
+.ui-dialog .ui-dialog-content {
+  background-color: black;
+}
+.numbertext {
+  color: rgb(233, 233, 233);
+}
+.inactive {
+  opacity: 0.3;
+}

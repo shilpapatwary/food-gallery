@@ -5,13 +5,16 @@
   <title>Food Gallery</title>
   <link rel="stylesheet" type="text/css" href="lib/jquery-ui.min.css">
   <link rel="stylesheet" type="text/css" href="style/style.css">
-
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <header>
     <span class="header-title">Food Gallery</span>
+    <!-- <img src="style/images/cooking-icons.jpg"> -->
+    <span class="fa fa-user user-icon"></span>
   </header>
+  <div class="filterContainer"></div>
   <div class="cardContainer">
 
   </div>
@@ -23,21 +26,25 @@
   <script type="text/template" id="cardTemplate">
    <div>
      <div class="itemCard" data-id="123457">
-       <div class="cardHeader">
-         <h5 class="cardTitle"></h5>
-       </div>
+       
        <div class="cardBody">
-         <div class="cardImage">
-           <img src=""/ alt = "">
-           <span class="author">Author: </span><span class="cardAuthor">Peggy Woodward</span>
-
+         <div class="cardInner">
+            <div class="cardImage">
+                <img src=""/ alt = "">
+              </div>
+              <div class="cardText">
+                <div class="cardAbstract"><span>The wrong choices can sabotage an otherwise healthy bowl of salad greens. Our resident nutritionist breaks it down.</span></div>
+              </div>
          </div>
-         <div class="cardText">
-           <div class="cardAbstract"><span>The wrong choices can sabotage an otherwise healthy bowl of salad greens. Our resident nutritionist breaks it down.</span></div>
          </div>
-         </div>
+         <div class="cardHeader">
+            <h5 class="cardTitle"></h5>
+            <span>-</span><span class="cardAuthor">Peggy Woodward</span>
+          </div>
+         <!-- <div><span class="author">Author: </span><span class="cardAuthor">Peggy Woodward</span> -->
+         <!-- </div> -->
        <div class="cardFooter">
-         <button class="clickForImages">Gallery</button>
+         <button class="clickForImages"><img src="./style/images/gallery.png"></button>
        </div>
      </div>
    </div>
